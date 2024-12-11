@@ -1,0 +1,17 @@
+(ns acme.main
+  (:require ["package:flutter/material.dart" :as m]
+            acme.widgets
+            [cljd.flutter :as f]))
+
+(defn main []
+  (f/run
+    (m/MaterialApp
+      .title "Welcome to Flutter"
+      .theme (m/ThemeData .primarySwatch m.Colors/pink))
+    .home
+    (m/Scaffold
+      .appBar (m/AppBar
+                .title (m/Text "Welcome to ClojureDart")))
+    .body
+    m/Center
+    (acme.widgets/greeting "Let's get coding!")))

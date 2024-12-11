@@ -1,0 +1,9 @@
+(ns acme.main)
+
+(defn add-it [a b]
+  (+ a b))
+
+(defn main []
+  (println "The answer is -> " (add-it 1 1)))
+
+

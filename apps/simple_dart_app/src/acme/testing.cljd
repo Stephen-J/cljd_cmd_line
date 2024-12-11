@@ -1,0 +1,6 @@
+(ns acme.testing
+  (:require [cljd.test :refer [deftest is]]
+            acme.main))
+
+(deftest a-test
+  (is (= 2 (acme.main/add-it 1 1))))

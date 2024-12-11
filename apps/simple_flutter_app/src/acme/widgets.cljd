@@ -1,0 +1,11 @@
+(ns acme.widgets
+  (:require ["package:flutter/material.dart" :as m]
+            [cljd.flutter :as f]))
+
+
+(defn greeting [msg]
+  (f/widget
+    (m/Text msg)
+    .style (m/TextStyle
+             .color m.Colors/blue
+             .fontSize 36.0)))
